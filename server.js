@@ -2,7 +2,7 @@
 let express = require("express");
 let session = require("express-session");
 // Requiring passport as we've configured it
-let passport = require("../config/passport");
+let passport = require("passport");
 
 // Setting up port and requiring models for syncing
 let PORT = process.env.PORT || 8080;

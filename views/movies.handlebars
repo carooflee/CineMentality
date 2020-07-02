@@ -23,12 +23,26 @@
 
 <body>
     <div class="jumbotron" id="jumbotron">
-        <h1 class="display-4">Catharsis App</h1>
-        <p class="subheading">Free to feel what you feel</p>
+        <h1 class="display-4">{{movieTitle}}</h1>
+        <img class="someClass" src="{{imgURL}}">
     </div>
 
-    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+    <div class="movieDiv">
+        <h2 class="display-4">{{movieInfo}}</h2>
+    </div>
 
+    <div class="movieRatings">
+        <ul>
+            <li>{{rottenTomato}}</li>
+            <li>{{catharsisRating}}</li>
+            <li>{{triggerRating}}</li>
+        </ul>
+    </div>
+
+    <form action="/" method="POST">
+        <textarea type="text" name="task"></textarea>
+        <button type="submit">Submit</button>
+    </form>
 </body>
 
 </html>
