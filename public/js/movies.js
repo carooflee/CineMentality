@@ -1,38 +1,49 @@
-let dotenv = require ('dotenv').config();
-let searchResults = [];
-let rottenTomatoesKey = process.env.RT_KEY;
-let omdbKey = process.env.OMDB_KEY;
+// const dotenv = require("dotenv").config();
+// const searchResults = [];
+// const rottenTomatoesKey = process.env.RT_KEY;
+const omdbKey = 78350918;
+const rtBaseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
+const movie = "dead alive";
+//Search for movie reviews and ratings:
+// $("#searchbar").on("click", event => {
+//   event.preventDefault();
 
-$(document).ready(function () {
-
-    //Search for movie reviews and ratings:
-    $("#searchBtn").on("click", function (event) {
-        event.preventDefault();
-        searchForMovieReview()
-        searchForMovie()
-    })
-    //OMDb API call.....
-    function searchForMovieReview() {
-        let movieReviewSearch = $("#search-input").val().trim();
-        let queryURL = `https://www.omdbapi.com/?t=${movieReviewSearch}&apikey=${omdbKey}`;
-        $.ajax({
-            url: queryURL,
-            method: "GET",
-        }).then(function (response) {
-            console.log(response);
-        });
-    };
-    //Rotten Tomatoes API call.....
-    function searchForMovie() {
-        let movieSearch = $("#search-input").val().trim();
-        let querryURL2 = `http://api.rottentomatoes.com/api/public/v1.0.json?apikey=${rottenTomatoesKey}`;
-        $.ajax({
-            url: queryURL,
-            method: "GET",
-        }).then(function (response) {
-            console.log(response);
-        });
-    };
+//   searchForMovieReview();
+//   searchForMovie();
+//   $("#movie-search").empty();
+// });
+searchForMovieReview();
+//OMDb API call.....
+function searchForMovieReview() {
+  // const movieReviewSearch = $("#movie-search")
+  //   .val()
+  //   .trim();
+  const queryURL = `https://www.omdbapi.com/?t=${movie}&apikey=${omdbKey}`;
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  }).then(response => {
+    console.log(response);
+    console.log(response.Ratings[1]);
+    console.log(response.Poster);
+    const movieDiv = $("<div class='card-img'>");
+    const imgURL = response.Poster;
+    const image = $("<img").attr("src", imgURL);
+    movieDiv.append(image);
+  });
+}
+//Rotten Tomatoes API call.....
+function searchForMovie() {
+  const movieSearch = $("#movie-search")
+    .val()
+    .trim();
+  const queryURL2 = `${rtBaseUrl}/movies.json?apikey=${rottenTomatoesKey}`;
+  $.ajax({
+    url: queryURL2,
+    method: "GET"
+  }).then(response => {
+    console.log(response);
+  });
 }
 
 // https://www.omdbapi.com/?t=${movieReviewSearch}&apikey=78350918
@@ -40,11 +51,8 @@ $(document).ready(function () {
 // Example code for the rotten tomatoes api call....
 // ============================================================================================
 
-// {/* <html>
-//   <head>
 //     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 
-//     <script>
 // var apikey = "myapikey";
 // var baseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
 
@@ -71,10 +79,3 @@ $(document).ready(function () {
 //    $(document.body).append('<img src="' + movie.posters.thumbnail + '" />');
 //  });
 // }
-
-//     </script>
-
-//   </head>
-//   <body>
-//   </body>
-// </html> */}

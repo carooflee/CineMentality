@@ -1,15 +1,15 @@
 {
     "development": {
       "username": "root",
-      "password": "",
-      "database": "movieDB",
+      "password": "#Nts44cqa@",
+      "database": "movie_db",
       "host": "127.0.0.1",
       "port": 3306,
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
-      "password": null,
+      "password": "#Nts44cqa@",
       "database": "database_test",
       "host": "127.0.0.1",
       "port": 3306,
@@ -17,7 +17,7 @@
     },
     "production": {
       "username": "root",
-      "password": null,
+      "password": "#Nts44cqa@",
       "database": "database_production",
       "host": "127.0.0.1",
       "port": 3306,

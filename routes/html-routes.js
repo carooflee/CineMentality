@@ -30,7 +30,7 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
-  // index route loads view.html
+  // index route loads index.html
   app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
