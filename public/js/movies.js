@@ -3,14 +3,14 @@
 // const rottenTomatoesKey = process.env.RT_KEY;
 const omdbKey = 78350918;
 const rtBaseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
-const movie = "dead alive";
 //Search for movie reviews and ratings:
 $("#search-button").on("click", event => {
   event.preventDefault();
 
   searchForMovieReview();
   // searchForMovie();
-  $("#searchbar").empty();
+  $("form").trigger("reset");
+
 });
 // searchForMovieReview();
 //OMDb API call.....
@@ -26,10 +26,30 @@ function searchForMovieReview() {
     console.log(response);
     console.log(response.Ratings[1]);
     console.log(response.Poster);
-    const movieDiv = $("<div class='card-img'>");
-    const imgURL = response.Poster;
-    const image = $("<img>").attr("src", imgURL);
-    movieDiv.append(image);
+    var imgURL = response.Poster;
+
+    var image = $("<img>").attr("src", imgURL);
+    let movieTitle = $("<h2>").text("Movie: " + response.Title)
+    let moviePlot = $("<h2>").text("Plot: " + response.Plot)
+    let movieRating = $("<h4>").text("Rated: " + response.Rated)
+    let movieYear = $("<h4>").text("Year: " + response.Year)
+    let rottenTomatoes = $("<h4>").text("Rotten Tomatoes: " + response.Ratings[1].Value)
+
+    $("#movieTitle").empty();
+    $("#moviePlot").empty();
+    $("#movieRating").empty();
+    $("#moviePoster").empty();
+    $("#movieYear").empty();
+    $("#movieRottenTomatoes").empty();
+
+    $("#movieTitle").append(movieTitle);
+    $("#moviePlot").append(moviePlot);
+    $("#movieRating").append(movieRating);
+    $("#moviePoster").append(image);
+    $("#movieYear").append(movieYear);
+    $("#movieRottenTomatoes").append(rottenTomatoes);
+
+
   });
 }
 //Rotten Tomatoes API call.....
