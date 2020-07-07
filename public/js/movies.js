@@ -5,20 +5,20 @@ const omdbKey = 78350918;
 const rtBaseUrl = "http://api.rottentomatoes.com/api/public/v1.0";
 const movie = "dead alive";
 //Search for movie reviews and ratings:
-// $("#searchbar").on("click", event => {
-//   event.preventDefault();
+$("#search-button").on("click", event => {
+  event.preventDefault();
 
-//   searchForMovieReview();
-//   searchForMovie();
-//   $("#movie-search").empty();
-// });
-searchForMovieReview();
+  searchForMovieReview();
+  // searchForMovie();
+  $("#searchbar").empty();
+});
+// searchForMovieReview();
 //OMDb API call.....
 function searchForMovieReview() {
-  // const movieReviewSearch = $("#movie-search")
-  //   .val()
-  //   .trim();
-  const queryURL = `https://www.omdbapi.com/?t=${movie}&apikey=${omdbKey}`;
+  const movieReviewSearch = $("#searchbar")
+    .val()
+    .trim();
+  const queryURL = `https://www.omdbapi.com/?t=${movieReviewSearch}&apikey=${omdbKey}`;
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -28,23 +28,23 @@ function searchForMovieReview() {
     console.log(response.Poster);
     const movieDiv = $("<div class='card-img'>");
     const imgURL = response.Poster;
-    const image = $("<img").attr("src", imgURL);
+    const image = $("<img>").attr("src", imgURL);
     movieDiv.append(image);
   });
 }
 //Rotten Tomatoes API call.....
-function searchForMovie() {
-  const movieSearch = $("#movie-search")
-    .val()
-    .trim();
-  const queryURL2 = `${rtBaseUrl}/movies.json?apikey=${rottenTomatoesKey}`;
-  $.ajax({
-    url: queryURL2,
-    method: "GET"
-  }).then(response => {
-    console.log(response);
-  });
-}
+// function searchForMovie() {
+//   const movieSearch = $("#searchbar")
+//     .val()
+//     .trim();
+//   const queryURL2 = `${rtBaseUrl}/movies.json?apikey=${rottenTomatoesKey}`;
+//   $.ajax({
+//     url: queryURL2,
+//     method: "GET"
+//   }).then(response => {
+//     console.log(response);
+//   });
+// }
 
 // https://www.omdbapi.com/?t=${movieReviewSearch}&apikey=78350918
 
