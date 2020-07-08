@@ -24,8 +24,15 @@
 
 <body>
 
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">CineMentality</h1>
+      <p class="lead">Search a movie to find movie info, trigger rating, and catharsis rating.</p>
+    </div>
+  </div>
+
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Talkie Triggers</a>
+    <a class="navbar-brand" href="index.html">CineMentality</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -50,73 +57,63 @@
           <a class="nav-link" href="signup.html">Sign In</a>
         </li>
       </ul>
-      <input type="text" placeholder="Search..." id="searchbar">
-      <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit">Search</button>
 
     </div>
   </nav>
 
 
-  <br>
-  <h3 class="popular">Popular Films</h3>
-  <br>
   <div class="container">
     <div class="row">
-      <div class="card">
-        <h4>The Lion King</h4>
-        <a href="./lionking.html"><img src="/images/lionking.jpeg" class="card-img img-fluid" alt="lion king poster" width="350" height="350"></a>
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Member Login Here</h2>
+        <form class="login">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-default">Login</button>
+        </form>
+        <br />
+        <p>Or sign up <a href="signup.html">here</a></p>
+      </div>
+
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Search Movies</h2>
+        <a class="nav-link" href="movie.html"><button id="movieReroute">Search Movies</button></a>
 
       </div>
-      <div class="card">
-        <h4>The Witch</h4>
-        <a href="./witch.html"><img src="/images/witch.png" class="card-img img-fluid" alt="witch poster" width="350" height="350"></a>
-
-      </div>
-      <div class="card">
-        <h4>Star Wars</h4>
-        <a href="./starwars.html"><img src="/images/starwars.jpg" class="card-img img-fluid" alt="star wars poster" width="350" height="350"></a>
-
-      </div>
-
-      <br><br><br>
-      <!--   
-    <h3>Popular Diagnoses</h3>
-    <br>
-    <div class="container">
-      <div class="row">
-        <button>Trauma</button>
-        <button>Depression</button>
-        <button>Grief</button>
     </div>
-  </div> -->
-
-      <footer class="footer">
-        <h4>Project By:</h4>
-        <a href="https://github.com/carooflee" id="foot">
-          <h5>Caroline</h5>
-        </a>
-        <a href="https://github.com/audijej" id="foot">
-          <h5>Jesse</h5>
-        </a>
-        <a href="https://github.com/josephbrimeyer" id="foot">
-          <h5>Joe</h5>
-        </a>
-      </footer>
-
-    </div>
-
-
-
-  </div>
   </div>
 
-  </div>
+  <br>
+  <br>
+  <footer class="footer">
+    <ul>
+      <h4>Project By:</h4>
+      <a href="https://github.com/carooflee" id="foot">
+        <h5>Caroline</h5>
+      </a>
+      <a href="https://github.com/audijej" id="foot">
+        <h5>Jesse</h5>
+      </a>
+      <a href="https://github.com/josephbrimeyer" id="foot">
+        <h5>Joe</h5>
+      </a>
+    </ul>
+  </footer>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="./js/movies.js" type="text/javascript"></script>
+  <script src="js/movies.js" type="text/javascript"></script>
+  <script src="js/login.js" type="text/javascript"></script>
 
- 
+
+
 
 </body>
 
