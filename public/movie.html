@@ -28,7 +28,7 @@
 <body id="moviePage">
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Talkie Triggers</a>
+        <a class="navbar-brand" href="index.html">CineMentality</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,29 +53,58 @@
                     <a class="nav-link" href="signup.html">Sign In</a>
                 </li>
             </ul>
-            <input type="text" placeholder="Search..." id="searchbar">
+
 
         </div>
     </nav>
 
-    <h1>Movies here!</h1>
+    <div id="searchBarDiv">
+        <h1>Start a movie search here...</h1>
+        <br>
+        <form>
+            <input type="text" placeholder="Search..." id="searchbar">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit">Search</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <div class="input-group mb-4 col-9" id="current-movie">
+
+        <div class="col-md-6 col-md-offset-3">
+            <div class="card">
+                <div id="movieTitle"></div>
+                <div id="movieYear"></div>
+                <div id="moviePoster"></div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-md-offset-3">
+            <div class="card">
+                <div id="moviePlot"></div>
+                <div id="movieRating"></div>
+                <div id="movieRottenTomatoes"></div>
+            </div>
+        </div>
+
+    </div>
 
     <footer class="footer">
         <h4>Project By:</h4>
         <a href="https://github.com/carooflee" id="foot">
-          <h5>Caroline</h5>
+            <h5>Caroline</h5>
         </a>
         <a href="https://github.com/audijej" id="foot">
-          <h5>Jesse</h5>
+            <h5>Jesse</h5>
         </a>
         <a href="https://github.com/josephbrimeyer" id="foot">
-          <h5>Joe</h5>
+            <h5>Joe</h5>
         </a>
-      </footer>
+    </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="./js/movies.js" type="text/javascript"></script>
+    <script src="js/movies.js" type="text/javascript"></script>
 
 
 </body>
