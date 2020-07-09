@@ -22,7 +22,7 @@
   integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 </head>
 
-<body id="moviePage">
+<body class="d-flex flex-column min-vh-100" id="moviePage">
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">CineMentality</a>
@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
 
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
 
@@ -65,38 +65,41 @@
   </div>
   <br>
   <br>
-  <div class="input-group mb-4 col-9" id="current-movie">
 
-    <div class="col-md-6 col-md-offset-3">
-      <div class="card">
-        <div id="movieTitle"></div>
-        <div id="movieYear"></div>
-        <div id="moviePoster"></div>
-      </div>
+    <div class="input-group mb-4 col-12" id="current-movie">
+
+        <div class="col-md-3 col-md-offset-3"></div>
+
+        <div class="col-md-3 col-md-offset-3">
+            <div id="movieAreaOne">
+            </div>
+        </div>
+
+        <div class="col-md-3 col-md-offset-3">
+            <div id="movieAreaTwo">
+            </div>
+        </div>
+
+        <div class="col-md-3 col-md-offset-3"></div>
+
     </div>
 
-    <div class="col-md-6 col-md-offset-3">
-      <div class="card">
-        <div id="moviePlot"></div>
-        <div id="movieRating"></div>
-        <div id="movieRottenTomatoes"></div>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
 
-  </div>
+    <div class="footer-copyright text-center py-3">Project By:
+      <a href="https://github.com/carooflee" target="_blank" id="foot">
+        Caroline
+      </a>
+      <a href="https://github.com/audijej" target="_blank" id="foot">
+        Jesse
+      </a>
+      <a href="https://github.com/josephbrimeyer" target="_blank" id="foot">
+        Joe
+      </a> </div>
 
-  <footer class="footer">
-    <h4>Project By:</h4>
-    <a href="https://github.com/carooflee" id="foot">
-      <h5>Caroline</h5>
-    </a>
-    <a href="https://github.com/audijej" id="foot">
-      <h5>Jesse</h5>
-    </a>
-    <a href="https://github.com/josephbrimeyer" id="foot">
-      <h5>Joe</h5>
-    </a>
   </footer>
+  <!-- Footer -->
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
