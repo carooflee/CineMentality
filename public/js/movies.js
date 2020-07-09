@@ -8,9 +8,10 @@ $("#search-button").on("click", event => {
   event.preventDefault();
 
   searchForMovieReview();
+  $("form").trigger("reset");
+
   catharsisRating();
   // searchForMovie();
-  $("form").trigger("reset");
 });
 
 function catharsisRating() {
@@ -45,24 +46,24 @@ function searchForMovieReview() {
     const imgURL = response.Poster;
     const image = $("<img>").attr("src", imgURL);
     const movieTitle = $("<h2>").text("Movie: " + response.Title);
-    const moviePlot = $("<h2>").text("Plot: " + response.Plot);
+    const moviePlot = $("<h3>").text("Plot: " + response.Plot);
     const movieRating = $("<h4>").text("Rated: " + response.Rated);
     const movieYear = $("<h4>").text("Year: " + response.Year);
     const rottenTomatoes = $("<h4>").text("Rotten Tomatoes: " + response.Ratings[1].Value);
+    const posterDivOne =  $("<div>").addClass("card").attr("id", "posterDivOne");
+    const posterDivTwo = $("<div>").addClass("card").attr("id", "posterDivTwo");
+    console.log(response)
 
-    $("#movieTitle").empty();
-    $("#moviePlot").empty();
-    $("#movieRating").empty();
-    $("#moviePoster").empty();
-    $("#movieYear").empty();
-    $("#movieRottenTomatoes").empty();
+    $("#movieAreaOne").empty();
+    $("#movieAreaTwo").empty();
 
-    $("#movieTitle").append(movieTitle);
-    $("#moviePlot").append(moviePlot);
-    $("#movieRating").append(movieRating);
-    $("#moviePoster").append(image);
-    $("#movieYear").append(movieYear);
-    $("#movieRottenTomatoes").append(rottenTomatoes);
+
+
+    posterDivOne.append(movieTitle).append(movieYear).append(image);
+    posterDivTwo.append(moviePlot).append(movieRating).append(rottenTomatoes);
+    $("#movieAreaOne").append(posterDivOne);
+    $("#movieAreaTwo").append(posterDivTwo);
+
   });
 }
 //Rotten Tomatoes API call.....

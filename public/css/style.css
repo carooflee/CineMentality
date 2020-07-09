@@ -1,6 +1,10 @@
-.flex-grid {
-    display: flex;
-  }
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  padding-bottom: 100px; //height of the footer
+  box-sizing: border-box;
+}
   
   .col {
     flex: 1;
@@ -92,9 +96,9 @@
           margin-right: auto; */
           min-width: fit-content;
           max-width: 350px;
-          /* max-height: 250px;
-          min-height: 250px;
-          min-width: 325px; */
+          max-height: 600px;
+          min-height: 600px;
+          /* min-width: 325px; */
           height: 100%;
           word-wrap: break-word;
           float: left;
@@ -103,6 +107,7 @@
           border: 3px;
           object-fit: cover;
           text-overflow: ellipsis;
+          color: white;
         }
   
         .card-over-1 {
@@ -161,11 +166,11 @@
   }
   
   
-    h3 {
+    /* h3 {
     font-size: 1vw;
     text-align: center;
     color: white;
-  }
+  } */
     
   a {
     color: white;
@@ -184,14 +189,14 @@
 
 
 
-  .footer {
-    position: fixed;
+  .page-footer {
+    position: absolute;
     width: 100%;
     bottom: 0;
     height: 60px;
     line-height: 10px;
-    background-color: teal;
-    
+    background-color: #343a40;
+    color: white;
   }
 
   #searchbar {
@@ -201,3 +206,5 @@
   #searchBarDiv {
     text-align: center;
   }
+
+ 
