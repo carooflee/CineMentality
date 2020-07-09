@@ -12,8 +12,12 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
+      console.log(req.user.email);
       res.redirect("/members");
+      
     }
+    console.log(req.user)
+    
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
@@ -28,12 +32,13 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
+    console.log(req.user)
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
   // index route loads index.html
-  app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
-  });
+  // app.get("/", (req, res) => {
+  //   res.sendFile(path.join(__dirname, "../public/index.html"));
+  // });
 
   // movie route loads movie.html
   app.get("/movie", (req, res) => {
