@@ -14,10 +14,9 @@ module.exports = function(app) {
     if (req.user) {
       console.log(req.user.email);
       res.redirect("/members");
-      
     }
     console.log(req.user)
-    
+
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
@@ -53,5 +52,13 @@ module.exports = function(app) {
   // signup route loads signup.html
   app.get("/signup", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+  // add a movie route add.html
+  app.get("/add", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/add.html"));
+  });
+  // view a movie route view.html
+  app.get("/view", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/view.html"));
   });
 };

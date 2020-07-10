@@ -27,6 +27,13 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
+    },
+    comments: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
     }
   });
   return Movies;

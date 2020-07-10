@@ -8,7 +8,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-
+const Movies = require("../models/movies.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -58,45 +58,46 @@ module.exports = function(app) {
       });
     }
   });
-
-  // GET route for getting all of the posts
-  app.get("/api/posts/", (req, res) => {
-    db.Post.findAll({}).then(dbPost => {
-      res.json(dbPost);
-    });
-  });
-
-  // Get route for returning posts of a specific category
-  app.get("/api/posts/category/:category", (req, res) => {
-    db.Post.findAll({
-      where: {
-        category: req.params.category
-      }
-    }).then(dbPost => {
-      res.json(dbPost);
-    });
-  });
-
-  // Get route for retrieving a single post
-  app.get("/api/posts/:id", (req, res) => {
-    db.Post.findOne({
-      where: {
-        id: req.params.id
-      }
-    }).then(dbPost => {
-      res.json(dbPost);
-    });
-  });
-
   // POST route for saving a new post
-  app.post("/api/posts", (req, res) => {
-    console.log(req.body);
-    db.Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      category: req.body.category
-    }).then(dbPost => {
-      res.json(dbPost);
+  app.post("/api/new", (req, res) => {
+    const movies = req.body;
+    const routeName = character.name.replace(/\s+/g, "").toLowerCase();
+    console.log(movie);
+    Movies.create({
+      routeName: routeName,
+      name: movies.name,
+      catharsis: movies.catharsis,
+      trigger: movies.trigger,
+      comments: movies.comments
     });
+    res.status(204).end();
   });
 };
+//____________________________________________________________
+// GET route for getting all of the posts
+// app.get("/api/posts/", (req, res) => {
+//   db.Post.findAll({}).then(dbPost => {
+//     res.json(dbPost);
+//   });
+// });
+
+// Get route for returning posts of a specific category
+// app.get("/api/posts/category/:category", (req, res) => {
+//   db.Post.findAll({
+//     where: {
+//       category: req.params.category
+//     }
+//   }).then(dbPost => {
+//     res.json(dbPost);
+//   });
+// });
+// Get route for retrieving a single post
+// app.get("/api/posts/:id", (req, res) => {
+//   db.Post.findOne({
+//     where: {
+//       id: req.params.id
+//     }
+//   }).then(dbPost => {
+//     res.json(dbPost);
+//   });
+// });
