@@ -1,48 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CineMentality</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
 
-    <title>Movie Mental Health Check</title>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
 
-    <link style="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-</head>
+            <li class="nav-item">
+                <a class="nav-link" href="movie.html">Search Movies<span class="sr-only">(current)</span></a>
+            </li>
 
-<body>
-    <div class="jumbotron" id="jumbotron">
-        <h1 class="display-4">{{movieTitle}}</h1>
-        <img class="someClass" src="{{imgURL}}">
-    </div>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Member Login</a>
+            </li>
 
-    <div class="movieDiv">
-        <h2 class="display-4">{{movieInfo}}</h2>
-    </div>
-
-    <div class="movieRatings">
-        <ul>
-            <li>{{rottenTomato}}</li>
-            <li>{{catharsisRating}}</li>
-            <li>{{triggerRating}}</li>
+            <li class="nav-item">
+                <a class="nav-link" href="signup.html">Sign Up</a>
+            </li>
         </ul>
+
+
+    </div>
+</nav>
+
+<h1>Welcome back {{user}}!!!!</h1>
+
+<div id="searchBarDiv">
+    <h1>Start a movie search here...</h1>
+    <br>
+    <form>
+        <input type="text" placeholder="Search..." id="searchbar">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit">Search</button>
+    </form>
+</div>
+<br>
+<br>
+
+<div class="input-group mb-4 col-12" id="current-movie">
+
+    <div class="col-md-3 col-md-offset-3"></div>
+
+    <div class="col-md-3 col-md-offset-3">
+        <div id="movieAreaOne">
+        </div>
     </div>
 
-    <form action="/" method="POST">
-        <textarea type="text" name="task"></textarea>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+    <div class="col-md-3 col-md-offset-3">
+        <div id="movieAreaTwo">
+        </div>
+    </div>
 
-</html>
+    <div class="col-md-3 col-md-offset-3"></div>
+
+</div>
+
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <div class="footer-copyright text-center py-3">Project By:
+        <a href="https://github.com/carooflee" target="_blank" id="foot">
+            Caroline
+        </a>
+        <a href="https://github.com/audijej" target="_blank" id="foot">
+            Jesse
+        </a>
+        <a href="https://github.com/josephbrimeyer" target="_blank" id="foot">
+            Joe
+        </a> </div>
+
+</footer>
+<!-- Footer -->
