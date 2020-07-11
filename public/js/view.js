@@ -1,12 +1,14 @@
 $("#search-btn").on("click", event => {
   event.preventDefault();
-  const searchedMovies = $("#character-search")
+  let searchedMovies = $("#movie-search")
     .val()
     .trim();
   // Using a RegEx Pattern to remove spaces from searchedCharacter
+  console.log(searchedMovies);
   searchedMovies = searchedMovies.replace(/\s+/g, "").toLowerCase();
+  console.log(searchedMovies);
   // AJAX GET-request for our servers api,
-  $.get("/api/" + searchedMovies, data => {
+  $.get("/api/views/" + searchedMovies, data => {
     console.log(data);
     $("#well-section").empty();
     if (!data) {
@@ -16,8 +18,11 @@ $("#search-btn").on("click", event => {
     } else {
       $("#well-section").append("<h2>" + data.name + "</h2>");
       $("#well-section").append("<h3>Catharsis: " + data.catharsis + "</h3>");
-      $("#well-section").append("<h3>Trigger: " + data.trigger + "</h3>");
+      $("#well-section").append(
+        "<h3>Trigger: " + data.trigger_rating + "</h3>"
+      );
       $("#well-section").append("<h3>Comments: " + data.comments + "</h3>");
+      $("#well-section").append("<h3>Comments: " + data.createdAt + "</h3>");
     }
   });
 });
