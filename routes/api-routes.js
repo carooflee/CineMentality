@@ -72,7 +72,43 @@ module.exports = function(app) {
     });
     res.status(204).end();
   });
+  // Get route for returning posts of a specific category
+  app.get("/api/views/:routeName", (req, res) => {
+    db.Movies.findOne({
+      where: {
+        routeName: req.params.routeName
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
+  });
+
+  //   if (req.params.routeName) {
+  //     Routename.findOne({
+  //       where: {
+  //         routeName: req.params.routeName
+  //       }
+  //     }).then(function(result) {
+  //     return res.json(result);
+  //   });
+  //   } else {
+  //     routeName.findAll().then(function(result) {
+  //       return res.json(result);
+  //     });
+  //   }
+  // });
 };
+//   const post = req.body;
+//   let routeName = post.name.replace(/\s+/g, "").toLowerCase();
+//   db.Post.findAll({
+//     where: {
+//       routeName: req.params.routeName
+//     }
+//   }).then(dbPost => {
+//     res.json(dbPost);
+//   });
+// });
+
 //____________________________________________________________
 // GET route for getting all of the posts
 // app.get("/api/posts/", (req, res) => {
