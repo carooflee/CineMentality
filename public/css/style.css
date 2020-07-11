@@ -207,4 +207,10 @@ body {
     text-align: center;
   }
 
+  .userEmail {
+    color: tomato;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
  
