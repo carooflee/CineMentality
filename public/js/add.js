@@ -22,7 +22,7 @@ $("#add-btn").on("click", event => {
     // on success, run this callback
     .then(data => {
       console.log(data);
-      alert("Adding movie review...");
+      $("#myModal").modal();
     });
   // empty each input box by replacing the value with an empty string
   $("#movie-name").val("");
@@ -30,3 +30,7 @@ $("#add-btn").on("click", event => {
   $("#trigger").val("");
   $("#comments").val("");
 });
+
+$("#ratingSubmitButton").on("click", event =>{
+  window.location.href = "./movie.html";
+})
