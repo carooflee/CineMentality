@@ -32,10 +32,12 @@ function searchForMovieReview() {
     const posterDivTwo = $("<div>")
       .addClass("card")
       .attr("id", "posterDivTwo");
+    const reviewButton = $("<a>").text("Add a movie review here").attr("href", "add.html").attr("button", "blue")
     console.log(response);
 
     $("#movieAreaOne").empty();
     $("#movieAreaTwo").empty();
+    $("#addMovieReviewDiv").empty();
 
     posterDivOne
       .append(movieTitle)
@@ -47,6 +49,7 @@ function searchForMovieReview() {
       .append(rottenTomatoes);
     $("#movieAreaOne").append(posterDivOne);
     $("#movieAreaTwo").append(posterDivTwo);
+    $("#addMovieReviewDiv").append(reviewButton);
   });
 }
 // function catharsisRating() {
