@@ -8,7 +8,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const Movies = require("../models/movies.js");
+
 // Routes
 // =============================================================
 module.exports = function(app) {
@@ -61,13 +61,13 @@ module.exports = function(app) {
   // POST route for saving a new post
   app.post("/api/new", (req, res) => {
     const movies = req.body;
-    const routeName = character.name.replace(/\s+/g, "").toLowerCase();
-    console.log(movie);
-    Movies.create({
+    const routeName = movies.name.replace(/\s+/g, "").toLowerCase();
+    console.log(movies);
+    db.Movies.create({
       routeName: routeName,
       name: movies.name,
       catharsis: movies.catharsis,
-      trigger: movies.trigger,
+      trigger_rating: movies.trigger,
       comments: movies.comments
     });
     res.status(204).end();
