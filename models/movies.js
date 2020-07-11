@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Movies = sequelize.define("movies", {
+  const Movies = sequelize.define("Movies", {
     routeName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -21,7 +21,7 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
-    trigger: {
+    trigger_rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
