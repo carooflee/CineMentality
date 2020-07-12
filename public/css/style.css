@@ -213,4 +213,25 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
- 
+ #addMovieReviewDiv {
+   font-size: 20px;
+   background-color: black;
+   text-align: center;
+}
+
+#viewMovieReviewDiv {
+  font-size: 20px;
+  text-align: center;
+  background-color: tomato;
+  border-color: slategray;
+  border: 3px;
+  
+}
+
+#viewReviewButton {
+  font-size: 20px;
+}
+
+#addReviewButton {
+  font-size: 20px;
+}
