@@ -31,6 +31,14 @@ $("#add-btn").on("click", event => {
   $("#comments").val("");
 });
 
-$("#ratingSubmitButton").on("click", event =>{
+$("#searchMoreMovieButton").on("click", event =>{
   window.location.href = "./movie.html";
+})
+
+$("#searchMovieRatingButton").on("click", event =>{
+  window.location.href = "./view.html";
+})
+
+$("#addMoreRatingRatingButton").on("click", event =>{
+  window.location.href = "./add.html";
 })
