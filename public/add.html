@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
 
 </head>
 
@@ -88,7 +89,7 @@
             </form>
             <br>
             <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+              <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target=".bd-example-modal-lg">
                 <span class="fa fa-fire"></span> Submit Movie Review</button>
             </div>
           </div>
@@ -99,8 +100,8 @@
   </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
+    <div class="modal fade bd-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
       
         <!-- Modal content-->
         <div class="modal-content">
@@ -111,7 +112,9 @@
             <p>Thank You For Your Review</p>
           </div>
           <div class="modal-footer">
-            <button type="button" id="ratingSubmitButton" class="btn btn-default" data-dismiss="modal">Your Input Is Appreciated</button>
+            <button type="button" id="searchMoreMovieButton" class="btn btn-default" data-dismiss="modal">Search More Movies</button>
+            <button type="button" id="searchMovieRatingButton" class="btn btn-default" data-dismiss="modal">Search For Movie Ratings</button>
+            <button type="button" id="addMoreRatingButton" class="btn btn-default" data-dismiss="modal">Add Another Movie Review</button>
           </div>
         </div>
         
