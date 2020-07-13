@@ -18,12 +18,10 @@ $("#search-button").on("click", event => {
       );
     } else {
       $("#well-section").append("<h2>" + data.name + "</h2>");
-      $("#well-section").append("<h5>Catharsis: " + data.catharsis + "</h5>");
-      $("#well-section").append(
-        "<h5>Trigger: " + data.trigger_rating + "</h5>"
-      );
-      $("#well-section").append("<h5>Comments: " + data.comments + "</h5>");
-      $("#well-section").append("<h7>Posted on: " + data.createdAt + "</h7>");
+      $("#well-section").append("<h3>Catharsis: " + data.catharsis + "</h3>");
+      $("#well-section").append("<h3>Trigger: " + data.trigger_rating + "</h3>");
+      $("#well-section").append("<h3>Comments: " + data.comments + "</h3>");
+      $("#well-section").append("<h3>Created: " + data.createdAt + "</h3>");
     }
   });
 
