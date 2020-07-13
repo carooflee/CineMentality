@@ -26,5 +26,4 @@ $("#search-button").on("click", event => {
   });
 
   $("form").trigger("reset");
-
 });
