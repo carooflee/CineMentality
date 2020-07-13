@@ -235,3 +235,17 @@ body {
 #addReviewButton {
   font-size: 20px;
 }
+
+#movieReroute {
+  background-color: white;
+  color: tomato;
+  border: 4px solid tomato;
+  transition: 0.5s;
+  font-weight: bolder;
+}
+
+#movieReroute:hover {
+  background-color: tomato;
+  box-shadow: 0 0 5px 5px #e74c3c;
+  color: white;
+}

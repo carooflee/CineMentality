@@ -5,3 +5,15 @@
     border-color: slategray;
     border: 3px;
 }
+
+.btn {
+    background-color: tomato;
+    color: white;
+    border: 2px solid white;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: rgba(202, 33, 4, 0.61);
+    box-shadow: 0 0 5px 5px #e74c3c; 
+}
