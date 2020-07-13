@@ -1,4 +1,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![Only 32 Kb](https://badge-size.herokuapp.com/Naereen/StrapDown.js/master/strapdown.min.js)](https://github.com/Naereen/StrapDown.js/blob/master/strapdown.min.js)
 
 ## CineMentality
  
@@ -50,7 +53,7 @@ If you'd like to leave a review, there's a link under the movie info. Click that
 # Credits 
 [Jesse Audie](https://github.com/audijej)
 
-[Joesph Brimeyer](https://github.com/josephbrimeyer)
+[Joseph Brimeyer](https://github.com/josephbrimeyer)
 
 # Testing
 We used Travis CI. To get started you'll need to do the following.
