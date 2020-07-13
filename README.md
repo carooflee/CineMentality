@@ -9,13 +9,18 @@ A site to search for triggers in movies for those with mental health issues.
 As a person with mental health struggles I want to be able to look up movies by triggers I might like to avoid, and find out if they offer any level of catharsis. When I search for a movie in the database, I want it to return a result with the movie title, catharsis rating, trigger rating, and list of potential triggers.  
     
 # Installation
-
-  npm install express
-  npm install express-handlebars
-  npm install sequelize
-  npm install bcryptjs
-  node server.js
-  npm install dotenv
+  `npm install express`
+  
+  `npm install express-handlebars`
+  
+  `npm install sequelize`
+  
+  `npm install bcryptjs`
+  
+  `node server.js`
+  
+  `npm install dotenv`
+  
 Then launch from localhost:9000 in the browser
     
     
