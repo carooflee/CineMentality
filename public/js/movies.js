@@ -1,4 +1,4 @@
-const omdbKey = 78350918;
+const omdbKey = process.env.OMDBKEY;
 //Search for movie reviews and ratings:
 $("#search-button").on("click", event => {
   event.preventDefault();
