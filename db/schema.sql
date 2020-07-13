@@ -1,3 +1,5 @@
+-- Schema for use in MySQL database if hosted locally
+
 -- USE movies_db;
 
 -- DROP TABLE IF EXISTS `movies`;

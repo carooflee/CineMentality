@@ -23,10 +23,9 @@ app.use(passport.session());
 
 // Handlebars set up
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars")
+app.set("view engine", "handlebars");
 
-const routes = require("./controllers/memberController.js"
-);
+const routes = require("./controllers/memberController.js");
 
 app.use(routes);
 

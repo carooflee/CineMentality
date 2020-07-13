@@ -1,18 +1,18 @@
-var express = require("express");
+const express = require("express");
 
-var router = express.Router();
+const router = express.Router();
 
-var User = require("../models/user.js");
+const User = require("../models/user.js");
 
-router.get("/", function(req, res) {
-    User.all(function(data) {
-      var hbsObject = {
-        email: data
-      };
-      console.log(hbsObject);
-      res.render("movies", hbsObject);
-    });
+router.get("/", (req, res) => {
+  User.all(data => {
+    const hbsObject = {
+      email: data
+    };
+    console.log(hbsObject);
+    res.render("movies", hbsObject);
   });
+});
 
 // Export routes for server.js to use.
 module.exports = router;

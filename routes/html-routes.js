@@ -34,10 +34,6 @@ module.exports = function(app) {
     console.log(req.user.email)
     res.render("movies", {layout:"main", email: req.user.email})
   });
-  // index route loads index.html
-  // app.get("/", (req, res) => {
-  //   res.sendFile(path.join(__dirname, "../public/index.html"));
-  // });
 
   // movie route loads movie.html
   app.get("/movie", (req, res) => {
