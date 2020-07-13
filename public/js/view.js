@@ -14,7 +14,7 @@ $("#search-button").on("click", event => {
     $("#well-section").empty();
     if (!data) {
       $("#well-section").append(
-        "<h2> The movie you are searching for could not be found. </h2>"
+        "<h2> The movie you are searching for currently doesn't have any reviews. </h2>"
       );
     } else {
       $("#well-section").append("<h2>" + data.name + "</h2>");
