@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Compiled and minified JavaScript, Materialize-->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100" id="moviePage">
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">CineMentality</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="movie.html">Search Movies<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Member Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="signup.html">Sign Up</a>
+        </li>
+      </ul>
+
+
+    </div>
+  </nav>
+
+  <div id="searchBarDiv">
+    <h1>Start a movie search here...</h1>
+    <br>
+    <form>
+      <input type="text" placeholder="Search..." id="searchbar">
+      <button class="btn btn-outline-success my-2 my-sm-0" id="search-button" type="submit">Search</button>
+    </form>
+  </div>
+  <br>
+  <br>
+
+    <div class="input-group mb-4 col-12" id="current-movie">
+
+        <div class="col-md-3 col-md-offset-3"></div>
+
+        <div class="col-md-3 col-md-offset-3">
+            <div id="movieAreaOne">
+            </div>
+        </div>
+
+        <div class="col-md-3 col-md-offset-3">
+            <div id="movieAreaTwo">
+            </div>
+        </div>
+
+        <div class="col-md-3 col-md-offset-3"></div>
+
+    </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+    <div class="footer-copyright text-center py-3">Project By:
+      <a href="https://github.com/carooflee" target="_blank" id="foot">
+        Caroline
+      </a>
+      <a href="https://github.com/audijej" target="_blank" id="foot">
+        Jesse
+      </a>
+      <a href="https://github.com/josephbrimeyer" target="_blank" id="foot">
+        Joe
+      </a> </div>
+
+  </footer>
+  <!-- Footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/members.js"></script>
+  <script src="js/movies.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- <script src="script.js" type="text/javascript"></script> -->
+
+
+
+</body>
+
+</html>
