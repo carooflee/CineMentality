@@ -41,6 +41,9 @@ If you'd like to leave a review, there's a link under the movie info. Click that
 
 ![rating](https://media.giphy.com/media/WOTtTUlFPtC1oevXwG/giphy.gif)
 
+# Deployed Link
+https://nameless-island-76490.herokuapp.com/index.html
+
 # Technologies Used
 * IMDB API
 * Passport
